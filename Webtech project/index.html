@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="en" ng-app="filterApp">
+<head>
+   <title>Hotel Booking</title>
+   <link rel="stylesheet" href="style.css">
+   <script src="script.js"></script>
+   <script src="app.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body>
+<section class="header">
+   <div class="flex">
+      <a href="#home" class="logo">Dayara Bugyal Homestay</a>
+      <a href="#availability" class="btn">check availability</a>
+      <div id="menu-btn" class="fas fa-bars"></div>
+   </div>
+   <nav class="navbar">
+      <a href="#home">home</a>
+      <a href="#about">about</a>
+      <a href="#reservation">reservation</a>
+      <a href="#gallery">gallery</a>
+      <a href="#contact">contact</a>
+      <a href="#reviews">reviews</a>
+   </nav>
+</section>
+<section class="availability" id="availability">
+   <section class="home" id="home">
+      <div class="swiper home-slider">
+         <div class="swiper-wrapper">
+            <div class="box swiper-slide">
+               <img src="images/home-img-4.jpg" alt="">
+               <div class="flex">
+                  <h3>luxurious rooms</h3>
+                  <a href="#availability" class="btn">check availability</a>
+               </div>
+            </div>
+         </div>
+      </div>
+   <section class="availability" id="availability">
+      <form action="" method="post" id="totalCostForm">
+         <div class="flex">
+             <div class="box">
+                 <p>check in <span>*</span></p>
+                 <input type="date" name="check_in" class="input" required>
+             </div>
+             <div class="box">
+                 <p>check out <span>*</span></p>
+                 <input type="date" name="check_out" class="input" required>
+             </div>
+             <div class="box">
+                 <p>adults <span>*</span></p>
+                 <select name="adults" class="input" required>
+                     <option value="1">1 adult</option>
+                     <option value="2">2 adults</option>
+                     <option value="3">3 adults</option>
+                     <option value="4">4 adults</option>
+                     <option value="5">5 adults</option>
+                     <option value="6">6 adults</option>
+                 </select>
+             </div>
+             <div class="box">
+                 <p>childs <span>*</span></p>
+                 <select name="childs" class="input" required>
+                     <option value="-">0 child</option>
+                     <option value="1">1 child</option>
+                     <option value="2">2 childs</option>
+                     <option value="3">3 childs</option>
+                     <option value="4">4 childs</option>
+                     <option value="5">5 childs</option>
+                     <option value="6">6 childs</option>
+                 </select>
+             </div>
+             <div class="box">
+                 <p>rooms <span>*</span></p>
+                 <select name="rooms" class="input" required>
+                     <option value="1">1 room</option>
+                     <option value="2">2 rooms</option>
+                     <option value="3">3 rooms</option>
+                     <option value="4">4 rooms</option>
+                     <option value="5">5 rooms</option>
+                     <option value="6">6 rooms</option>
+                 </select>
+             </div>
+         </div>
+         <input type="submit" value="total cost" name="check" class="btn" id="totalCostButton"> 
+     </form> 
+  </section> 
+  <section>
+<div class="acti">
+   <h1>activities</h1>
+</div>
+<section ng-app="myApp">
+   <div ng-controller="FilterController">
+      <input class="filter" type="text" ng-model="searchText" placeholder="Search..." style="position: relative; left: 800px; top: -50px;">
+      <label class="search">search for activities </label>      
+       <ul>
+            <div ng-app="filterApp" ng-controller="FilterController">
+                   <input class="filter" type="text" ng-model="searchText" placeholder="Search...">
+                   <ul>
+                       <li ng-repeat="item in items | filter:searchText">
+                           {{ item }}
+                       </li>
+                   </ul>
+           </div>
+</section>
+<section class="groot">
+   <div class="trek">  
+      <img src="images/treaking.jpg" alt="">
+      <h1> trekking </h1>
+      <p style="font-size: 10px;">
+         Embark on the renowned Dayara Bugyal Trek, a highlight of Uttarakhand's trekking scene.<br>
+          Explore the breathtaking beauty of alpine meadows, dense forests, and majestic peaks.<br>
+           Begin from Raithal village, trek through oak and rhododendron forests to Dayara Bugyal, and <br>
+           witness panoramic views of Bandarpoonch and Draupadi ka Danda peaks. <br>
+           Experience camping under the starlit sky at Dayara Bugyal before descending back to Raithal.<br>
+          A must-do trek for nature enthusiasts and adventure seekers. 
+      </p>
+      <a href="#availability" class="btn">make reservation</a>
+   </div>
+   <div class="ram">
+      <img src="images\about-img-2.jpg" alt="">
+      <h1>during winter</h1>
+      <p>
+         Lorem ipsum dolor sit amet consectetur
+         adipisicing elit. Voluptates, 
+      </p>
+      <a href="#availability" class="btn">check availability</a>
+   </div>
+   <div class="three">
+      <img src="images\about-img-1.jpg" alt="">
+      <h1>during winter</h1>
+      <p>
+         Lorem ipsum dolor sit amet consectetur
+         adipisicing elit. Voluptates, 
+      </p>
+      <a href="#availability" class="btn">contact us</a>
+   </div>
+</section>
+<section class="gall">
+ <marquee direction =" right" behavior="alternate">
+   <h1>Gallery Area</h1>
+</marquee>
+
+   <div class="apple">
+      <img class="a" src="images\about-img-3.jpg" alt="">
+      <img class="b" src="images\gallery-img-5.webp.jpg">
+      <img class="c" src="images\home-img-2 (2).jpg">
+      <img class="d" src="images\gallery-img-6.webp.jpg">
+   <div class="e">
+   <video width="320" height="240" autoplay muted loop>
+      <source src="images\dogs.mp4" type="video/mp4" >
+    </video>
+   </div>
+   </div> 
+   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3425.5930228065013!2d78.60174477268754!3d30.842067880345496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39088bb6671e8459%3A0xabc0786fee401394!2z4KSm4KSv4KS-4KSw4KS-IOCkrOClgeCkl-CljeCkr-CkvuCksiDgpLjgpLDgpL7gpK8g4KS54KWL4KSu4KS44KWN4KSf4KWHIERheWFyYSBCdWd5YWxzYXJhaSBob21lc3RheQ!5e0!3m2!1sen!2sin!4v1713937664233!5m2!1sen!2sin" width="500" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+<section class="question">
+   <h1>
+      frequently asked questions
+   </h1>
+      <P class="a">how to cancel?</P>
+      <textarea placeholder="Subject: Cancellation of Reservation
+      Regrettably, I must cancel my [room type] reservation from [check-in] to [check-out]. Kindly refund fees per policy. Thank you for understanding.
+      " style="height: 70px; width: 500px; color: aliceblue;">
+</textarea>
+<button style="background-color: bisque;"> submit </button>
+<P class="b">is there any vacancy?</P>
+<P class="c">what are payment methods</P>
+<p class="d">how to claim coupan codes?</p>
+<P class="e">what are the age requirements?</P>
+</section>
+<footer>
+   <div>
+      This is the footer content.
+   </div>
+   <div class="a">contact us - 7303XXXXXX <br>
+       mail - anurag9999rawt@gmail.com</div>
+</footer>
+</body>
+</html>
